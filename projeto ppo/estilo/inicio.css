@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+main {
+    width: 100vw;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > p {
+    font-family: 'Orelega One', cursive;
+    font-weight: 400;
+    font-size: 3vh;
+    letter-spacing: 0.2vh;
+    color: #5E5853;
+}

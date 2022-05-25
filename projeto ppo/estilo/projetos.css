@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+main {
+    height: 90vh;
+    width: 100vw;
+    padding: 5vh;
+    display: flex;
+}
+
+main > .botao {
+    position: fixed;
+    left: 85vw;
+    top: 15vh;
+}
+
+main > div.divisao {
+    position: fixed;
+    width: 96vw;
+    height: 0.5vh;
+    left: 2vw;
+    top: 24vh;
+    border-radius: 0.2vh;
+    background-color: #D1C2B7;
+}
+
+/*<input type="button" value="Nova História" onclick="location.href = 'criacao.html'">*/

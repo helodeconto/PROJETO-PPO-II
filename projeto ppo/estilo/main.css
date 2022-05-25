@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    background-color: #FFF5EE;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding-top: 30vh;
+}
+
+.menu {
+    position: fixed;
+    width: 100vw;
+    height: 7vh;
+    background-color: #D1C2B7;
+    justify-content: space-around;
+    padding-left: 92vw;
+}
+
+.menu > div {
+    height: 5vh;
+    width: 8vw;
+    text-justify: auto;
+    font-family: 'Orelega One', cursive;
+    font-size: 3.5vh;
+    line-height: 7vh;
+    color: #FFF5EE;
+    cursor: pointer;
+}
+
+.botao, button {
+    width: 12vw;
+    height: 6vh;
+    background-color: #E8DBD3;
+    border-radius: 15px;
+    font-family: 'Orelega One', cursive;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.7vh;
+    line-height: 6vh;
+    color: #5E5853;
+    cursor: pointer;
+}
+

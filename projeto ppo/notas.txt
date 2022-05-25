@@ -1,0 +1,18 @@
+Para fazer:
+
+- [ ]  Criar personagem
+- [ ]  Mostrar personagens criados
+
+- [ ]  Criar cenário
+- [ ]  Mostrar cenário criado
+
+- [ ]  Criar um novo projeto
+- [ ]  Mostrar projetos criados
+
+- [ ]  Colocar cenário na cena
+- [ ]  Colocar personagens na cena
+- [ ]  Adicionar falas ao personagem
+- [ ]  Atribuir uma emoção ao personagem
+
+- [ ]  Criar nova cena
+- [ ]  Linha do tempo

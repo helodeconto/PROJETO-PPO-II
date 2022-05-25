@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+@keyframes abreMenu {
+    0% {
+        transform: translateX(-110%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.navMenu {
+    padding-top: 10vh;
+    padding-left: 1.75vw;
+    width: 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.navMenu > div {
+    height: 1.5vh;
+    width: 4vw;
+    background: #E8DBD3;
+    border-radius: 2vh;
+    margin: 0.25vh;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4vh;
+    margin: 1.75vw;
+    width: 18vw;
+    height: 70vh;
+    background-color: #E8DBD3;
+    border-radius: 15px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.75vh;
+    line-height: 5vh;
+    letter-spacing: 0.5vh;
+    color: #524C48;
+    transform: translateX(-110%);
+}
+
+nav > ul > div {
+    cursor: pointer;
+}
+
+.nav-list {
+    transform: translateX(0);
+    animation: abreMenu 1s;
+    overflow-y: scroll;
+}
+
+.timeline {
+    position: fixed;
+    height: 1.2vh;
+    width: 80vw;
+    top: 95vh;
+    left: 10vw;
+    border-radius: 2vh;
+    background-color: #D1C2B7;
+}
+
+.container-personagem > div, .container-cenario > div {
+    width: 12vw;
+    height: 5vh;
+    text-align: center;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2vh;
+    line-height: 5vh;
+    color: #5E5853;
+    cursor: pointer;
+    background-color: #CFC3BC;
+}
