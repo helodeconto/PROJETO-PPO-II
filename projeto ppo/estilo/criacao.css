@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
 @keyframes abreMenu {
     0% {
@@ -9,13 +10,12 @@
         transform: translateX(0);
     }
 }
-
+ 
+/*menu*/
 .navMenu {
     padding-top: 10vh;
     padding-left: 1.75vw;
     width: 6vw;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
 }
@@ -28,10 +28,12 @@
     margin: 0.25vh;
 }
 
+nav {
+    position: fixed;
+}
+
 nav > ul {
     list-style: none;
-    display: flex;
-    flex-direction: column;
     padding-top: 4vh;
     margin: 1.75vw;
     width: 18vw;
@@ -47,6 +49,10 @@ nav > ul {
 }
 
 nav > ul > div {
+    padding-left: 0.5vw;
+}
+
+nav > ul > div > div {
     cursor: pointer;
 }
 
@@ -56,18 +62,13 @@ nav > ul > div {
     overflow-y: scroll;
 }
 
-.timeline {
-    position: fixed;
-    height: 1.2vh;
-    width: 80vw;
-    top: 95vh;
-    left: 10vw;
-    border-radius: 2vh;
-    background-color: #D1C2B7;
+/*personagens e cenários*/
+.add-personagem, .add-cenario {
+    width: 13vw;
 }
 
 .container-personagem > div, .container-cenario > div {
-    width: 12vw;
+    width: 13vw;
     height: 5vh;
     text-align: center;
     border-radius: 15px;
@@ -78,4 +79,89 @@ nav > ul > div {
     color: #5E5853;
     cursor: pointer;
     background-color: #CFC3BC;
+}
+
+/*linha do tempo*/
+.timeline {
+    position: fixed;
+    height: 1.2vh;
+    width: 80vw;
+    top: 95vh;
+    left: 10vw;
+    border-radius: 2vh;
+    background-color: #D1C2B7;
+}
+
+/*área de trabalho*/
+.workspace {
+    margin-top: 18vh;
+    width: 50vw;
+    height: 70vh;
+    text-justify: auto;
+    font-family: 'Orelega One', cursive;
+    font-size: 2.5vh;
+    color: #5E5853;
+    overflow-y: scroll;
+}
+
+.workspace > div {
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    font-size: 2.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.area-dialogo {
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    font-size: 2.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#areaCenario {
+    height: 6vh;
+    background-color: #E8DBD3;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 6vh;
+}
+
+textarea {
+    min-height: 5vh;
+    background-color: #E8DBD3;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    resize: vertical;
+}
+
+.bt-delete {
+    height: 3vh;
+    width: 2.5vw;
+    line-height: 3vh;
+    font-family: 'Orelega One', cursive;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.7vh;
+    color: #5E5853;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.div-cenario {
+    height: 5vh;
+    width: 100%;
+    background-color: #E8DBD3;
+    border-radius: 15px;
+}
+
+.add-emocao {
+    height: 3vh;
+    width: 3vw;
+    line-height: 1vh;
+    align-self: flex-end;
 }

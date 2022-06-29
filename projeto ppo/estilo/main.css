@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+/*barra rolagem*/
+::-webkit-scrollbar {
+    width: 0.7vw;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #CFC3BC;
+}
+
+
 a {
     text-decoration: none;
 }
@@ -14,7 +26,6 @@ html, body {
     padding: 0;
     align-items: center;
     align-content: center;
-    overflow-x: hidden;
 }
 
 main {
@@ -23,7 +34,6 @@ main {
     justify-content: center;
     align-items: center; 
     flex-direction: column;
-    padding-top: 30vh;
 }
 
 .menu {
@@ -46,6 +56,7 @@ main {
     cursor: pointer;
 }
 
+/*botão*/
 .botao, button {
     width: 12vw;
     height: 6vh;
@@ -55,8 +66,7 @@ main {
     text-align: center;
     font-weight: 400;
     font-size: 2.7vh;
-    line-height: 6vh;
     color: #5E5853;
     cursor: pointer;
+    outline: none;
 }
-

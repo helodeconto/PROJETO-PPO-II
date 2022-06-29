@@ -7,7 +7,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='estilo/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='estilo/criacao.css'>
-    <script defer async src='java-script/navbar-menu.js'></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer async src='java-script/criacao.js'></script>
     <script defer async src="java-script/main.js"></script>
 </head>
 <body>
@@ -24,13 +25,7 @@
             <ul>
                 <div>
                     Personagens
-                    <div class="container-personagem">
-                        <template class="personagem">
-                            <div class="listaPersonagem">
-                                <div>Personagem 1</div>
-                            </div>
-                        </template>
-                    </div>
+                    <div class="container-personagem"></div>
                     <button class="add-personagem">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
@@ -39,13 +34,7 @@
                 </div>
                 <div>
                     Cenários
-                    <div class="container-cenario">
-                        <template class="cenario">
-                            <div class="listaCenario">
-                                <div>Cenário 1</div>
-                            </div>
-                        </template>
-                    </div>
+                    <div class="container-cenario"></div>
                     <button class="add-cenario">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
@@ -56,6 +45,16 @@
         </nav>
     </header>
     <main>
+        <!--área da cena-->
+        <div class="workspace">
+            <div id="areaCenario">
+            </div>
+                <template class="fala">
+                    <button class="bt-delete">x</button>
+                    <textarea class="dialogo" placeholder="Disse..."></textarea>
+                    <button class="add-emocao">+</button>
+                </template>
+        </div>
     </main>
     <div class="timeline"></div>
 </body>
