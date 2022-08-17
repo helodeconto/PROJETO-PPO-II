@@ -24,7 +24,7 @@ divMenu.addEventListener('click', ev => {
 
 //adiciona personagem
 const addPersonagem = document.querySelector(".add-personagem")
-let personagens = document.querySelector(".container-personagem")
+let containerPersonagem = document.querySelector(".container-personagem")
 
 addPersonagem.addEventListener("click", () => {
     
@@ -35,13 +35,52 @@ addPersonagem.addEventListener("click", () => {
         classePersonagem.nome = nome
         let novoPersonagem = document.createElement("div")
         novoPersonagem.innerText = classePersonagem.nome;
-        personagens.appendChild(novoPersonagem)
+        containerPersonagem.appendChild(novoPersonagem)
+    });
+})
+
+//deleta personagem
+//impede o context menu padrão de ser exibido
+containerPersonagem.addEventListener("contextmenu", ev => {
+    
+    let personagem = Array.from(containerPersonagem.querySelectorAll("div"))
+    let idxClickedElement = personagem.indexOf(ev.target)
+    ev.preventDefault();
+    swal("O que deseja fazer com " + personagem[idxClickedElement].innerHTML + "?", {
+    buttons: {
+        renomear: {
+        text: "Renomear",
+        value: "renomear",
+        },
+        excluir: true,
+    },
+    })
+    .then((value) => {
+    switch (value) {
+    
+        case "excluir":
+            swal("Pronto! Você excluiu " + personagem[idxClickedElement].innerHTML, {
+                icon: "success",
+            });
+            const deletaPersonagem = ev.target
+            deletaPersonagem.remove()
+        break;
+    
+        case "renomear":
+            swal("Renomear " + personagem[idxClickedElement].innerHTML + ":", {
+                content: "input",
+            })
+            .then((nome) => {
+                ev.target.innerHTML = nome
+            });
+        break;
+    }
     });
 })
 
 //adiciona cenário
 const addCenario = document.querySelector(".add-cenario")
-const cenario = document.querySelector(".container-cenario")
+const containerCenario = document.querySelector(".container-cenario")
 
 addCenario.addEventListener("click", () => {
     
@@ -51,7 +90,46 @@ addCenario.addEventListener("click", () => {
     .then((nome) => {
         let novoCenario = document.createElement("div")
         novoCenario.innerText = nome;
-        cenario.appendChild(novoCenario)
+        containerCenario.appendChild(novoCenario)
+    });
+})
+
+//deleta cenário
+//impede o context menu padrão de ser exibido
+containerCenario.addEventListener("contextmenu", ev => {
+    
+    let cenario = Array.from(containerCenario.querySelectorAll("div"))
+    let idxClickedElement = cenario.indexOf(ev.target)
+    ev.preventDefault();
+    swal("O que deseja fazer com " + cenario[idxClickedElement].innerHTML + "?", {
+    buttons: {
+        renomear: {
+        text: "Renomear",
+        value: "renomear",
+        },
+        excluir: true,
+    },
+    })
+    .then((value) => {
+    switch (value) {
+    
+        case "excluir":
+            swal("Pronto! Você excluiu " + cenario[idxClickedElement].innerHTML, {
+                icon: "success",
+              });
+              const deletaCenario = ev.target
+              deletaCenario.remove()
+        break;
+    
+        case "renomear":
+            swal("Renomear " + cenario[idxClickedElement].innerHTML + ":", {
+                content: "input",
+            })
+            .then((nome) => {
+                ev.target.innerHTML = nome
+            });
+        break;
+    }
     });
 })
 
@@ -60,9 +138,9 @@ addCenario.addEventListener("click", () => {
 const main = document.querySelector("main")
 const areaTrabalho = main.querySelector(".workspace")
 
-personagens.addEventListener("dblclick", ev => {
+containerPersonagem.addEventListener("dblclick", ev => {
 
-    let personagem = Array.from(personagens.querySelectorAll("div"))
+    let personagem = Array.from(containerPersonagem.querySelectorAll("div"))
     let idxClickedElement = personagem.indexOf(ev.target)
     const templateDialogo = main.querySelector("template.fala")
 
@@ -81,13 +159,13 @@ personagens.addEventListener("dblclick", ev => {
 //adiciona cenário na cena **
 const divCenario = areaTrabalho.querySelector("div")
 
-cenario.addEventListener("dblclick", ev => {
+containerCenario.addEventListener("dblclick", ev => {
 
-    let cenarios = Array.from(cenario.querySelectorAll("div"))
-    let idxClickedElement = cenarios.indexOf(ev.target)
+    let cenario = Array.from(containerCenario.querySelectorAll("div"))
+    let idxClickedElement = cenario.indexOf(ev.target)
 
-    console.log(cenarios[idxClickedElement].innerHTML)
-    divCenario.innerHTML = cenarios[idxClickedElement].innerHTML
+    console.log(cenario[idxClickedElement].innerHTML)
+    divCenario.innerHTML = cenario[idxClickedElement].innerHTML
 
 })
 

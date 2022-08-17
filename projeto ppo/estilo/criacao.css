@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
 @keyframes abreMenu {
@@ -40,20 +40,13 @@ nav > ul {
     height: 70vh;
     background-color: #E8DBD3;
     border-radius: 15px;
-    font-family: 'Amatic SC', cursive;
-    font-size: 2.75vh;
+    font-family: 'Arima Madurai', cursive;
+    font-weight: 700;
+    font-size: 2vh;
     line-height: 5vh;
     letter-spacing: 0.5vh;
-    color: #524C48;
+    color: #5E5853;
     transform: translateX(-110%);
-}
-
-nav > ul > div {
-    padding-left: 0.5vw;
-}
-
-nav > ul > div > div {
-    cursor: pointer;
 }
 
 .nav-list {
@@ -65,20 +58,20 @@ nav > ul > div > div {
 /*personagens e cenários*/
 .add-personagem, .add-cenario {
     width: 13vw;
+    border: 1.5px solid #5E5853;
 }
 
 .container-personagem > div, .container-cenario > div {
     width: 13vw;
     height: 5vh;
-    text-align: center;
+    text-align: left;
     border-radius: 15px;
-    text-align: center;
     font-weight: 400;
     font-size: 2vh;
     line-height: 5vh;
     color: #5E5853;
     cursor: pointer;
-    background-color: #CFC3BC;
+    /*background-color: #CFC3BC;*/
 }
 
 /*linha do tempo*/
@@ -95,10 +88,11 @@ nav > ul > div > div {
 /*área de trabalho*/
 .workspace {
     margin-top: 18vh;
+    padding: 10px;
     width: 50vw;
     height: 70vh;
     text-justify: auto;
-    font-family: 'Orelega One', cursive;
+    font-family: 'Arima Madurai', cursive;
     font-size: 2.5vh;
     color: #5E5853;
     overflow-y: scroll;
@@ -107,7 +101,7 @@ nav > ul > div > div {
 .workspace > div {
     width: 100%;
     height: auto;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 2.5vh;
     display: flex;
     flex-direction: column;
@@ -116,7 +110,8 @@ nav > ul > div > div {
 .area-dialogo {
     width: 100%;
     height: auto;
-    font-weight: 400;
+    padding-top: 1vh;
+    font-weight: 700;
     font-size: 2.5vh;
     display: flex;
     flex-direction: column;
@@ -124,6 +119,7 @@ nav > ul > div > div {
 
 #areaCenario {
     height: 6vh;
+    font-weight: 900;
     background-color: #E8DBD3;
     border-radius: 15px;
     text-align: center;
@@ -131,18 +127,22 @@ nav > ul > div > div {
 }
 
 textarea {
+    padding: 8px;
     min-height: 5vh;
     background-color: #E8DBD3;
     border-radius: 15px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arima Madurai', cursive;
+    font-weight: 400;
+    font-size: 14px;
     outline: none;
     resize: vertical;
 }
 
 .bt-delete {
-    height: 3vh;
+    height: 4vh;
     width: 2.5vw;
-    line-height: 3vh;
+    background-color: #FFF5EE;
+    border: 0 none;
     font-family: 'Orelega One', cursive;
     text-align: center;
     font-weight: 400;
@@ -161,7 +161,15 @@ textarea {
 
 .add-emocao {
     height: 3vh;
-    width: 3vw;
-    line-height: 1vh;
+    width: 2.5vw;
+    margin-top: 0.5vh;
+    background-color: #E8DBD3;
+    border: 0 none;
+    font-family: 'Orelega One', cursive;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.7vh;
+    color: #5E5853;
+    cursor: pointer;
     align-self: flex-end;
 }

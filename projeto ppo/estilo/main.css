@@ -57,10 +57,11 @@ main {
 }
 
 /*botão*/
-.botao, button {
+button, .botao {
     width: 12vw;
     height: 6vh;
     background-color: #E8DBD3;
+    border: 0 none;
     border-radius: 15px;
     font-family: 'Orelega One', cursive;
     text-align: center;
