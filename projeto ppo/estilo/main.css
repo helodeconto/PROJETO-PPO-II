@@ -12,7 +12,7 @@
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #CFC3BC;
+    background: #342D29;
 }
 
 
@@ -21,7 +21,7 @@ a {
 }
 
 html, body {
-    background-color: #FFF5EE;
+    background-color: #D4C0AB;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -40,7 +40,7 @@ main {
     position: fixed;
     width: 100vw;
     height: 7vh;
-    background-color: #D1C2B7;
+    background-color: #342D29;
     justify-content: space-around;
     padding-left: 92vw;
 }
@@ -52,7 +52,7 @@ main {
     font-family: 'Orelega One', cursive;
     font-size: 3.5vh;
     line-height: 7vh;
-    color: #FFF5EE;
+    color: #D4C0AB;
     cursor: pointer;
 }
 
@@ -60,14 +60,14 @@ main {
 button, .botao {
     width: 12vw;
     height: 6vh;
-    background-color: #E8DBD3;
+    background-color: #342D29;
     border: 0 none;
     border-radius: 15px;
     font-family: 'Orelega One', cursive;
     text-align: center;
     font-weight: 400;
     font-size: 2.7vh;
-    color: #5E5853;
+    color: #D4C0AB;
     cursor: pointer;
     outline: none;
 }

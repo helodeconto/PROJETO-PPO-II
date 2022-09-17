@@ -10,7 +10,23 @@ class Personagem {
     }
 }
 
+class Cenario {
+
+    constructor(nome) {
+        this.nome = nome
+    }
+
+    getNome(nome){
+        return nome
+    }
+
+    setNome(novoNome) {
+        this.nome = novoNome
+    }
+}
+
 let classePersonagem = new Personagem()
+let classeCenario = new Cenario()
 
 //abre menu
 const nav = document.querySelector("nav")
@@ -88,8 +104,9 @@ addCenario.addEventListener("click", () => {
         content: "input",
     })
     .then((nome) => {
+        classeCenario.nome = nome
         let novoCenario = document.createElement("div")
-        novoCenario.innerText = nome;
+        novoCenario.innerText = classeCenario.nome;
         containerCenario.appendChild(novoCenario)
     });
 })
@@ -138,7 +155,7 @@ containerCenario.addEventListener("contextmenu", ev => {
 const main = document.querySelector("main")
 const areaTrabalho = main.querySelector(".workspace")
 
-containerPersonagem.addEventListener("dblclick", ev => {
+containerPersonagem.addEventListener("click", ev => {
 
     let personagem = Array.from(containerPersonagem.querySelectorAll("div"))
     let idxClickedElement = personagem.indexOf(ev.target)
@@ -159,7 +176,7 @@ containerPersonagem.addEventListener("dblclick", ev => {
 //adiciona cenário na cena **
 const divCenario = areaTrabalho.querySelector("div")
 
-containerCenario.addEventListener("dblclick", ev => {
+containerCenario.addEventListener("click", ev => {
 
     let cenario = Array.from(containerCenario.querySelectorAll("div"))
     let idxClickedElement = cenario.indexOf(ev.target)

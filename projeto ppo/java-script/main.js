@@ -3,3 +3,51 @@
     var clon = template.content.cloneNode(true);
     document.body.appendChild(clon);
 }*/
+
+class Projeto {
+
+    constructor(nome) {
+        this.nome = nome
+    }
+
+    getNome(nome){
+        return nome
+    }
+}
+
+let classeProjeto = new Projeto()
+
+/*let main = document.querySelector("main")
+let containerProjeto = main.querySelector(".container-projeto")
+let addProjeto = main.querySelector(".add-projeto")
+
+addProjeto.addEventListener("click", () => {
+    
+    swal("Nova história", {
+        content: "input",
+    })
+    .then((nome) => {
+        classeProjeto.nome = nome
+        let novoProjeto = document.createElement("div")
+        novoProjeto.innerText = classeProjeto.nome;
+        containerProjeto.appendChild(novoProjeto)
+    });
+})*/
+
+
+let main = document.querySelector("main")
+let addProjeto = main.querySelector(".add-projeto")
+
+addProjeto.addEventListener("click", () => {
+    
+    swal("Nova história", {
+        content: "input",
+    })
+    .then((nome) => {
+        classeProjeto.nome = nome
+        let novoProjeto = document.createElement("div")
+        novoProjeto.innerText = classeProjeto.nome;
+        main.appendChild(novoProjeto)
+        window.open("criacao.html")
+    });
+})
