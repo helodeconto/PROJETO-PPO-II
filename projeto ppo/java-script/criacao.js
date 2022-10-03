@@ -190,13 +190,12 @@ containerCenario.addEventListener("click", ev => {
 areaTrabalho.addEventListener("click", ev => {
     const btClose = ev.target.closest(".bt-delete")
     const areaDialogo = ev.target.closest(".area-dialogo")
-
-    btClose.addEventListener("click", ev => {
-        const modalFala = ev.target.closest(".area-dialogo")
-        modalFala.remove()
-    })
     
     if (btClose != null) {
+        btClose.addEventListener("click", ev => {
+            const modalFala = ev.target.closest(".area-dialogo")
+            modalFala.remove()
+        })
         const modalFala = ev.target.closest(".area-dialogo")
         modalFala.remove()
     }
@@ -208,3 +207,23 @@ const addEmocao = workspace.querySelector(".add-emocao")
 
 addEmocao.addEventListener("click", () => {
 })*/
+
+//pop-up emoção
+let idxAddEmocao = 0
+
+areaTrabalho.addEventListener("click", ev => {
+    const addEmocao = ev.target.closest(".add-emocao")
+
+    addEmocao.addEventListener("click", ev => {
+
+        if (addEmocao != null) {
+            let addEmocao = Array.from(areaTrabalho.querySelectorAll(".add-emocao"))
+            idxAddEmocao = addEmocao.indexOf(ev.target)
+            console.log(idxAddEmocao)
+            let url="popup-emocao.html"
+            window.open(url,'janela', 'width=600, height=500, top= 200, left=700, scrollbars=yes, status=no, toolbar=no, location=no, directories=no, menubar=no, resizable=no, fullscreen=no')
+            return idxAddEmocao
+        }
+
+    })
+})

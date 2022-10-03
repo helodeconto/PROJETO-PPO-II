@@ -37,6 +37,7 @@ addProjeto.addEventListener("click", () => {
 
 let main = document.querySelector("main")
 let addProjeto = main.querySelector(".add-projeto")
+let container = main.querySelector(".container-projetos")
 
 addProjeto.addEventListener("click", () => {
     
@@ -47,7 +48,7 @@ addProjeto.addEventListener("click", () => {
         classeProjeto.nome = nome
         let novoProjeto = document.createElement("div")
         novoProjeto.innerText = classeProjeto.nome;
-        main.appendChild(novoProjeto)
+        container.appendChild(novoProjeto)
         window.open("criacao.html")
     });
 })

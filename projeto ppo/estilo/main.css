@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 
+:root {
+    --main-background-color: #D4C0AB;
+    --menu-color: #342D29;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,7 +17,7 @@
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #342D29;
+    background: var(--menu-color);
 }
 
 
@@ -21,7 +26,7 @@ a {
 }
 
 html, body {
-    background-color: #D4C0AB;
+    background-color: var(--main-background-color);
     margin: 0;
     padding: 0;
     align-items: center;
@@ -37,10 +42,10 @@ main {
 }
 
 .menu {
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: 7vh;
-    background-color: #342D29;
+    background-color: var(--menu-color);
     justify-content: space-around;
     padding-left: 92vw;
 }
@@ -52,7 +57,7 @@ main {
     font-family: 'Orelega One', cursive;
     font-size: 3.5vh;
     line-height: 7vh;
-    color: #D4C0AB;
+    color: var(--main-background-color);
     cursor: pointer;
 }
 
@@ -60,14 +65,14 @@ main {
 button, .botao {
     width: 12vw;
     height: 6vh;
-    background-color: #342D29;
+    background-color: var(--menu-color);
     border: 0 none;
     border-radius: 15px;
     font-family: 'Orelega One', cursive;
     text-align: center;
     font-weight: 400;
     font-size: 2.7vh;
-    color: #D4C0AB;
+    color: var(--main-background-color);
     cursor: pointer;
     outline: none;
 }

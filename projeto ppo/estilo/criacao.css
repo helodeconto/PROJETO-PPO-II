@@ -10,6 +10,11 @@
         transform: translateX(0);
     }
 }
+
+:root {
+    --main-background-color: #D4C0AB;
+    --menu-color: #342D29;
+}
  
 /*menu*/
 .navMenu {
@@ -23,7 +28,7 @@
 .navMenu > div {
     height: 1.5vh;
     width: 4vw;
-    background: #342D29;
+    background: var(--menu-color);
     border-radius: 2vh;
     margin: 0.25vh;
 }
@@ -38,14 +43,14 @@ nav > ul {
     margin: 1.75vw;
     width: 18vw;
     height: 70vh;
-    background-color: #342D29;
+    background-color: var(--menu-color);
     border-radius: 15px;
     font-family: 'Arima Madurai', cursive;
     font-weight: 700;
     font-size: 2vh;
     line-height: 5vh;
     letter-spacing: 0.5vh;
-    color: #D4C0AB;
+    color: var(--main-background-color);
     transform: translateX(-110%);
 }
 
@@ -58,7 +63,7 @@ nav > ul {
 /*personagens e cenários*/
 .add-personagem, .add-cenario {
     width: 13vw;
-    border: 1.5px solid #D4C0AB;
+    border: 1.5px solid var(--main-background-color);
 }
 
 .container-personagem > div, .container-cenario > div {
@@ -69,7 +74,7 @@ nav > ul {
     font-weight: 400;
     font-size: 2vh;
     line-height: 5vh;
-    color: #D4C0AB;
+    color: var(--main-background-color);
     cursor: pointer;
     /*background-color: #CFC3BC;*/
 }
@@ -82,7 +87,7 @@ nav > ul {
     top: 95vh;
     left: 10vw;
     border-radius: 2vh;
-    background-color: #342D29;
+    background-color: var(--menu-color);
 }
 
 /*área de trabalho*/
@@ -94,7 +99,7 @@ nav > ul {
     text-justify: auto;
     font-family: 'Arima Madurai', cursive;
     font-size: 2.5vh;
-    color: #342D29;
+    color: var(--menu-color);
     overflow-y: scroll;
 }
 
@@ -120,8 +125,8 @@ nav > ul {
 #areaCenario {
     height: 6vh;
     font-weight: 900;
-    background-color: #342D29;
-    color: #D4C0AB;
+    background-color: var(--menu-color);
+    color: var(--main-background-color);
     border-radius: 15px;
     text-align: center;
     line-height: 6vh;
@@ -130,7 +135,7 @@ nav > ul {
 textarea {
     padding: 8px;
     min-height: 5vh;
-    background-color: #D4C0AB;
+    background-color: var(--main-background-color);
     border-radius: 15px;
     font-family: 'Arima Madurai', cursive;
     font-weight: 400;
@@ -142,13 +147,14 @@ textarea {
 .bt-delete {
     height: 4vh;
     width: 2.5vw;
-    background-color: #342D29;
+    background-color: var(--menu-color);
     border: 0 none;
     font-family: 'Orelega One', cursive;
     text-align: center;
     font-weight: 400;
     font-size: 2.7vh;
-    color: #D4C0AB;
+    line-height: 4vh;
+    color: var(--main-background-color);
     cursor: pointer;
     align-self: flex-end;
 }
@@ -156,7 +162,7 @@ textarea {
 .div-cenario {
     height: 5vh;
     width: 100%;
-    background-color: #D4C0AB;
+    background-color: var(--main-background-color);
     border-radius: 15px;
 }
 
@@ -164,13 +170,13 @@ textarea {
     height: 3vh;
     width: 2.5vw;
     margin-top: 0.5vh;
-    color: #D4C0AB;
+    color: var(--main-background-color);
     border: 0 none;
     font-family: 'Orelega One', cursive;
     text-align: center;
     font-weight: 400;
     font-size: 2.7vh;
-    background-color: #342D29;
+    background-color: var(--menu-color);
     cursor: pointer;
     align-self: flex-end;
 }

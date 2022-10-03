@@ -1,0 +1,105 @@
+//import idxAddEmocao from "./criacao"
+
+class Emocao {
+
+    constructor(emoji,nome) {
+        this.emoji = emoji
+        this.nome = nome
+    }
+
+    getEmoji(emoji){
+        return emoji
+    }
+
+    getNome(nome){
+        return nome
+    }
+
+    setEmoji(novoEmoji){
+        this.emoji = novoEmoji
+    }
+
+    setNome(novoNome) {
+        this.nome = novoNome
+    }
+}
+
+let classeEmocao = new Emocao()
+
+const areaEmocao = document.querySelector(".area-emocoes")
+
+areaEmocao.addEventListener("click", ev => {
+    let emocao = ev.target.closest(".emocao")
+    let areaEmoji = emocao.querySelector("div")
+    let emoji = areaEmoji.innerText
+    console.log(emoji)
+
+    /*const areaTrabalho = document.querySelector(".worspace")
+    let addEmocao = Array.from(areaTrabalho.querySelectorAll(".add-emocao"))
+
+    addEmocao[idxAddEmocao].innerText = emoji*/
+})
+
+const btNovaEmocao = document.querySelector(".nova-emocao")
+
+btNovaEmocao.addEventListener("click", () => {
+    swal("Nova emoção:", {
+        content: "input",
+    })
+    .then((nome) => {
+
+        swal("Selecione um emoji", {
+            content: "input",
+        })
+        .then((emoji) => {
+            classeEmocao.nome = nome
+            let novaEmocao = document.createElement("div")
+            novaEmocao.innerHTML = `<div class="emocao"> ${emoji} </div> <div> ${nome} </div>`;
+            areaEmocao.appendChild(novaEmocao)
+        })
+    });
+})
+
+areaEmocao.addEventListener("contextmenu", ev => {
+    
+    let emocao = ev.target.closest(".emocao")
+    let idxClickedElement = listaEmocao.indexOf(ev.target)
+    ev.preventDefault();
+    swal("O que deseja fazer com a emoção?", {
+    buttons: {
+        editar: {
+        text: "Editar",
+        value: "editar",
+        },
+        excluir: true,
+    },
+    })
+    .then((value) => {
+    switch (value) {
+    
+        case "excluir":
+            swal("Pronto! A emoção foi excluída.", {
+                icon: "success",
+              });
+              const deletaEmocao = ev.target
+              deletaEmocao.remove()
+        break;
+    
+        case "editar":
+            swal("Editar", {
+                content: "input",
+            })
+            .then((nome) => {
+                swal("Selecione um emoji", {
+                    content: "input",
+                })
+                .then((emoji) => {
+                    let editaEmocao = Array.from(listaEmocao[idxClickedElement].innerHTML)
+                    editaEmocao[0] = nome
+                    editaEmocao[1] = emoji
+                })
+            });
+        break;
+    }
+    });
+})

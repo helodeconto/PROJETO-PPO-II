@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700;900&display=swap');
+
+:root {
+    --menu-color: #342D29;
+}
 
 main {
     height: 90vh;
@@ -8,19 +13,45 @@ main {
 }
 
 main > button {
-    position: fixed;
+    position: absolute;
     left: 85vw;
     top: 15vh;
 }
 
 main > div.divisao {
-    position: fixed;
+    position: absolute;
     width: 96vw;
     height: 0.5vh;
     left: 2vw;
     top: 24vh;
     border-radius: 0.2vh;
-    background-color: #342D29;
+    background-color: var(--menu-color);
+}
+
+.container-projetos {
+    position: absolute;
+    top: 30vh;
+    min-height: 60vh;
+    max-height: fit-content;
+    width: 96vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 - 1em;
+}
+
+.container-projetos > div {
+    height: 12vh;
+    width: 15vw;
+    border-radius: 15px;
+    background-color: var(--menu-color);
+    padding: 1em;
+    text-align: center;
+    font-family: 'Arima Madurai', cursive;
+    font-weight: 700;
+    font-size: 2vh;
+    color: var(--main-background-color);
+    margin: 1em 0;
 }
 
 /*<input type="button" value="Nova História" onclick="location.href = 'criacao.html'">*/

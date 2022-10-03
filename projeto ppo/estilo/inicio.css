@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 
+:root {
+    --menu-color: #342D29;
+}
+
 main {
     width: 100vw;
     display: flex;
@@ -16,5 +20,5 @@ main {
     font-size: 3vh;
     letter-spacing: 0.2vh;
     text-align: center;
-    color: #342D29;
+    color: var(--menu-color);
 }
