@@ -40,6 +40,7 @@ areaEmocao.addEventListener("click", ev => {
     addEmocao[idxAddEmocao].innerText = emoji*/
 })
 
+//nova emoção
 const btNovaEmocao = document.querySelector(".nova-emocao")
 
 btNovaEmocao.addEventListener("click", () => {
@@ -61,6 +62,7 @@ btNovaEmocao.addEventListener("click", () => {
     });
 })
 
+//mostra emoção no console
 areaEmocao.addEventListener("contextmenu", ev => {
     
     let listaEmocao = Array.from(areaEmocao.querySelectorAll(".emocao"))
