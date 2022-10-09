@@ -173,7 +173,7 @@ containerPersonagem.addEventListener("click", ev => {
 })
 
 
-//adiciona cenário na cena **
+//adiciona cenário na cena
 const divCenario = areaTrabalho.querySelector("div")
 
 containerCenario.addEventListener("click", ev => {

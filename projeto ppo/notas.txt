@@ -1,18 +1,5 @@
 ﻿Para fazer:
 
-- [X]  Criar personagem
-- [X]  Mostrar personagens criados
-
-- [X]  Criar cenário
-- [X]  Mostrar cenário criado
-
-- [ ]  Criar um novo projeto
-- [ ]  Mostrar projetos criados
-
-- [X]  Colocar cenário na cena
-- [X]  Colocar personagens na cena
-- [X]  Adicionar falas ao personagem
-- [ ]  Atribuir uma emoção ao personagem
-
-- [ ]  Criar nova cena
-- [ ]  Linha do tempo
+- [ ] Banco de Dados
+- [ ] Add emoção
+- [ ] Add nova cena

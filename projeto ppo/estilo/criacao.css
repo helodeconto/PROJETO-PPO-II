@@ -180,3 +180,13 @@ textarea {
     cursor: pointer;
     align-self: flex-end;
 }
+
+.add-cena {
+    position: fixed;
+    height: 4vh;
+    width: 4vw;
+    top: 93.5vh;
+    left: 91vw;
+    border-radius: 2vh;
+    background-color: var(--menu-color);
+}

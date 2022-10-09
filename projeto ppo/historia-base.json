@@ -1,0 +1,167 @@
+{
+    "title": "A Banda",
+
+    "personagens": {
+      "PERSONAGEM_1": {
+        "nome": "Alice"
+      },
+      "PERSONAGEM_2": {
+        "nome": "Rayana"
+      },
+      "PERSONAGEM_3": {
+        "nome": "Nathaniel"
+      },
+      "PERSONAGEM_4": {
+        "nome": "Jay"
+      },
+      "PERSONAGEM_6": {
+        "nome": "Nash"
+    }
+    },
+
+    "cenarios": {
+      "CENARIO_1": {
+        "nome": "Corredor"
+      },
+      "CENARIO_2": {
+        "nome": "Sala de ensaio"
+      }
+    },
+
+    "emocoes": {
+        "EMOCAO_1": {
+            "nome": "alegria",
+            "icone": "😄"
+        },
+        "EMOCAO_2": {
+            "nome": "calma",
+            "icone": "🙂"
+        },
+        "EMOCAO_3": {
+            "nome": "preocupação",
+            "icone": "😟"
+        },
+        "EMOCAO_4": {
+            "nome": "irritado",
+            "icone": "😠"
+        }
+    },
+
+    "cenas": [
+      {
+        "cenario": "CENARIO_1",
+        "falas": [
+          {
+            "personagen": "PERSONAGEM_6",
+            "emocao": "EMOCAO_2",
+            "fala": "Alice! Imaginei que estivesse aqui nesse horário..."
+          },
+          {
+            "personagen": "PERSONAGEM_1",
+            "emocao": "EMOCAO_1",
+            "fala": "Nash! Foram só duas semanas, mas mesmo assim... Quanto tempo!"
+          },
+          {
+            "personagen": "PERSONAGEM_6",
+            "emocao": "EMOCAO_2",
+            "fala": "Desculpa não ter ligado nenhuma vez, mas você sabe... Eu e os meninos estávamos um pouco ocupados com o movimento no café."
+          },
+          {
+            "personagen": "PERSONAGEM_1",
+            "emocao": "EMOCAO_1",
+            "fala": "Não precisa se preocupar, eu sei que você deve ter esquecido o celular em algum lugar... Depois de tanto tempo eu aprendo uma coisa ou outra sobre meus amigos..."
+          },
+          {
+            "personagen": "PERSONAGEM_6",
+            "emocao": "EMOCAO_2",
+            "fala": "Ocupada com a volta às aulas?"
+          },
+          {
+            "personagen": "PERSONAGEM_1",
+            "emocao": "EMOCAO_3",
+            "fala": "Um pouco... Por sinal, tenho que ir ensaiar com os outros... Depois continuamos a conversa..."
+          }
+        ]
+      },
+      {
+        "cenario": "CENARIO_2",
+        "falas": [
+            {
+                "personagen": "PERSONAGEM_4",
+                "emocao": "EMOCAO_2",
+                "fala": "E o que acham de 'A Banda'?"
+            },
+            {
+                "personagen": "PERSONAGEM_2",
+                "emocao": "EMOCAO_4",
+                "fala": "É sério isso Jay? Isso não é nem um pouco óbvio, é muito óbvio..."
+            },
+            {
+                "personagen": "PERSONAGEM_4",
+                "emocao": "EMOCAO_2",
+                "fala": "Vocês não queriam algo que passasse uma primeira impressão? Algo óbvio demais sempre chama a atenção, digo isso por experiência própria..."
+            },
+            {
+                "personagen": "PERSONAGEM_2",
+                "emocao": "EMOCAO_2",
+                "fala": "Tenho certeza que o Nate vai concordar comigo, não é?"
+            },
+            {
+                "personagen": "PERSONAGEM_2",
+                "emocao": "EMOCAO_4",
+                "fala": "Nathaniel!"
+            },
+            {
+                "personagen": "PERSONAGEM_3",
+                "emocao": "EMOCAO_2",
+                "fala": "Não precisa gritar tão alto, Rayana... O bairro todo deve ter te escutado, não precisamos de mais gente reclamando dos nossos ensaios..."
+            },
+            {
+                "personagen": "PERSONAGEM_2",
+                "emocao": "EMOCAO_2",
+                "fala": "Então, a gente estava discutindo sobre o nome da banda e o Jay teve uma ideia óbvia demais."
+            },
+            {
+                "personagen": "PERSONAGEM_4",
+                "emocao": "EMOCAO_4",
+                "fala": "Uma ideia incrível, você quer dizer, né? O que acham de 'A Banda'?"
+            },
+            {
+                "personagen": "PERSONAGEM_2",
+                "emocao": "EMOCAO_2",
+                "fala": "Eu disse pra ele que não é um bom nome pra inscrevermos no festival, mas ele não me escuta..."
+            },
+            {
+                "personagen": "PERSONAGEM_3",
+                "emocao": "EMOCAO_2",
+                "fala": "Olha Neil, sua ideia é legal mas... Eu tenho que concordar com a Ray dessa vez... Acho que precisamos de algo um pouco mais..."
+            },
+            {
+                "personagen": "PERSONAGEM_1",
+                "emocao": "EMOCAO_1",
+                "fala": "Único, você ia dizer?"
+            },
+            {
+                "personagen": "PERSONAGEM_4",
+                "emocao": "EMOCAO_1",
+                "fala": "Alice! A gente estava te esperando pra começar o ensaio."
+            },
+            {
+                "personagen": "PERSONAGEM_1",
+                "emocao": "EMOCAO_2",
+                "fala": "Obrigada Jay... Desculpem por deixá-los esperando, mas acabei encontrando um amigo no caminho..."
+            },
+            {
+                "personagen": "PERSONAGEM_3",
+                "emocao": "EMOCAO_2",
+                "fala": "Não precisa se preocupar com isso... Mas algo me diz que você já tem uma ideia de nome pra banda, não é?"
+            },
+            {
+                "personagen": "PERSONAGEM_1",
+                "emocao": "EMOCAO_1",
+                "fala": "Não dá pra esconder nada de você, né Nate? O que acham de: 'NewSky'?"
+            }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,50 @@
+{
+    "title": "Teste",
+    "personagens": {
+      "PERSONAGEM_1": {
+        "nome": "CJ"
+      },
+      "PERSONAGEM_2": {
+        "nome": "8Ball"
+      }
+    },
+    "cenarios": {
+      "CENARIO_1": {
+        "nome": "asdasd"
+      },
+      "CENARIO_2": {
+        "nome": "ZZZ"
+      }
+    },
+    "emocoes": {
+      "EMOCAO_1": {
+        "nome": "raiva",
+        "icone": ""
+      },
+      "EMOCAO_2": {
+        "nome": "tristeza",
+        "icone": ""
+      },
+      "EMOCAO_3": {
+        "nome": "dúvida",
+        "icone": ""
+      }
+    },
+    "cenas": [
+      {
+        "cenario": "CENARIO_1",
+        "falas": [
+          {
+            "personagen": "PERSONAGEM_1",
+            "emocao": "EMOCAO_1",
+            "fala": "Oi!"
+          },
+          {
+            "personagen": "PERSONAGEM_2",
+            "emocao": "EMOCAO_3",
+            "fala": "Oi!?"
+          }
+        ]
+      }
+    ]
+  }
