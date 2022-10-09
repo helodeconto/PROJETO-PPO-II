@@ -3,3 +3,5 @@
 - [ ] Banco de Dados
 - [ ] Add emoção
 - [ ] Add nova cena
+
+-
