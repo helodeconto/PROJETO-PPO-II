@@ -45,14 +45,24 @@ main {
     position: absolute;
     width: 100vw;
     height: 7vh;
+    padding-left: 1vw;
     background-color: var(--menu-color);
-    justify-content: space-around;
-    padding-left: 92vw;
+    color: var(--main-background-color);
+}
+
+.menu > h1 {
+    position: fixed;
+    margin-left: 10vw;
+    text-align: center ;
+    line-height: 7vh;
+    width: 80vw;
 }
 
 .menu > div {
+    position: fixed;
     height: 5vh;
     width: 8vw;
+    margin-left: 92vw;
     text-justify: auto;
     font-family: 'Orelega One', cursive;
     font-size: 3.5vh;

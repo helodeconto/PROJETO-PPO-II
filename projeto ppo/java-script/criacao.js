@@ -25,6 +25,31 @@ class Cenario {
     }
 }
 
+class Emocao {
+
+    constructor(emoji,nome) {
+        this.emoji = emoji
+        this.nome = nome
+    }
+
+    getEmoji(emoji){
+        return emoji
+    }
+
+    getNome(nome){
+        return nome
+    }
+
+    setEmoji(novoEmoji){
+        this.emoji = novoEmoji
+    }
+
+    setNome(novoNome) {
+        this.nome = novoNome
+    }
+}
+
+let classeEmocao = new Emocao()
 let classePersonagem = new Personagem()
 let classeCenario = new Cenario()
 
@@ -48,10 +73,13 @@ addPersonagem.addEventListener("click", () => {
         content: "input",
     })
     .then((nome) => {
+        if (nome === ""){
+            return
+        }
         classePersonagem.nome = nome
         let novoPersonagem = document.createElement("div")
-        novoPersonagem.innerText = classePersonagem.nome;
-        containerPersonagem.appendChild(novoPersonagem)
+        novoPersonagem.innerText = nome;
+        containerPersonagem.appendChild(novoPersonagem).setAttribute("name", nome.toUpperCase())
     });
 })
 
@@ -87,6 +115,9 @@ containerPersonagem.addEventListener("contextmenu", ev => {
                 content: "input",
             })
             .then((nome) => {
+                if (nome === ""){
+                    return
+                }
                 ev.target.innerHTML = nome
             });
         break;
@@ -104,9 +135,13 @@ addCenario.addEventListener("click", () => {
         content: "input",
     })
     .then((nome) => {
+        if (nome === ""){
+            return
+        }
         classeCenario.nome = nome
         let novoCenario = document.createElement("div")
-        novoCenario.innerText = classeCenario.nome;
+        novoCenario.innerText = nome;
+        containerCenario.appendChild(novoCenario).setAttribute("name", nome.toUpperCase())
         containerCenario.appendChild(novoCenario)
     });
 })
@@ -143,6 +178,9 @@ containerCenario.addEventListener("contextmenu", ev => {
                 content: "input",
             })
             .then((nome) => {
+                if (nome === ""){
+                    return
+                }
                 ev.target.innerHTML = nome
             });
         break;
@@ -186,8 +224,9 @@ containerCenario.addEventListener("click", ev => {
 
 })
 
-//remove diálogo
+
 areaTrabalho.addEventListener("click", ev => {
+    //remove diálogo
     const btClose = ev.target.closest(".bt-delete")
     const areaDialogo = ev.target.closest(".area-dialogo")
     
@@ -199,31 +238,42 @@ areaTrabalho.addEventListener("click", ev => {
         const modalFala = ev.target.closest(".area-dialogo")
         modalFala.remove()
     }
-})
 
-//adicionar emoção
-/*const workspace = document.querySelector(".workspace")
-const addEmocao = workspace.querySelector(".add-emocao")
+    //add emoção à fala
+    const areaEmocao = ev.target.closest(".dropdown-menu")
 
-addEmocao.addEventListener("click", () => {
-})*/
+    areaEmocao.addEventListener("click", ev => {
+        let emocao = ev.target.closest("li")
+        let emoji = emocao.innerText
+        console.log(emoji)
 
-//pop-up emoção
-let idxAddEmocao = 0
+        /*const areaTrabalho = document.querySelector(".worspace")
+        let addEmocao = Array.from(areaTrabalho.querySelectorAll(".add-emocao"))
 
-areaTrabalho.addEventListener("click", ev => {
-    const addEmocao = ev.target.closest(".add-emocao")
+        addEmocao[idxAddEmocao].innerText = emoji*/
+    })
 
-    addEmocao.addEventListener("click", ev => {
+    //nova emoção
+    const btNovaEmocao = document.querySelector(".nova-emocao")
 
-        if (addEmocao != null) {
-            let addEmocao = Array.from(areaTrabalho.querySelectorAll(".add-emocao"))
-            idxAddEmocao = addEmocao.indexOf(ev.target)
-            console.log(idxAddEmocao)
-            let url="popup-emocao.html"
-            window.open(url,'janela', 'width=600, height=500, top= 200, left=700, scrollbars=yes, status=no, toolbar=no, location=no, directories=no, menubar=no, resizable=no, fullscreen=no')
-            return idxAddEmocao
-        }
+    btNovaEmocao.addEventListener("click", () => {
+        swal("Nova emoção:", {
+            content: "input",
+        })
+        .then((nome) => {
 
+            swal("Selecione um emoji", {
+                content: "input",
+            })
+            .then((emoji) => {
+                classeEmocao.nome = nome
+                let novaEmocao = document.createElement("div")
+                novaEmocao.setAttribute('class', 'emocao')
+                novaEmocao.innerHTML = `<li><a class="dropdown-item" href="#"> ${emoji} ${nome} </a></li>`;
+                areaEmocao.appendChild(novaEmocao)
+            })
+        });
     })
 })
+
+
