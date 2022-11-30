@@ -28,20 +28,20 @@ let classeEmocao = new Emocao()
 
 const areaEmocao = document.querySelector(".area-emocoes")
 
-areaEmocao.addEventListener("click", ev => {
-    let emocao = ev.target.closest(".emocao")
-    let areaEmoji = emocao.querySelector("div")
-    let emoji = areaEmoji.innerText
-    console.log(emoji)
+    areaEmocao.addEventListener("click", ev => {
+        let emocao = ev.target.closest(".emocao")
+        let areaEmoji = emocao.querySelector("div")
+        let emoji = areaEmoji.innerText
+        console.log(emoji)
 
-    /*const areaTrabalho = document.querySelector(".worspace")
-    let addEmocao = Array.from(areaTrabalho.querySelectorAll(".add-emocao"))
+        /*const areaTrabalho = document.querySelector(".worspace")
+        let addEmocao = Array.from(areaTrabalho.querySelectorAll(".add-emocao"))
 
-    addEmocao[idxAddEmocao].innerText = emoji*/
-})
+        addEmocao[idxAddEmocao].innerText = emoji*/
+    })
 
 //nova emoção
-const btNovaEmocao = document.querySelector(".nova-emocao")
+const btNovaEmocao = document.querySelector(".nova-emocoes")
 
 btNovaEmocao.addEventListener("click", () => {
     swal("Nova emoção:", {

@@ -55,6 +55,31 @@
         </nav>
     </header>
     <main>
+        <div class="container">
+            <div class="area-emocao">
+                <div class="emocao">
+                    <div class="emoji">😄​</div>
+                    <div class="nome-emocao">Feliz</div>
+                </div>
+                <div class="emocao">
+                    <div class="emoji">😢​​</div>
+                    <div class="nome-emocao">Triste</div>
+                </div>
+                <div class="emocao">
+                    <div class="emoji">😠​​</div>
+                    <div class="nome-emocao">Raiva</div>
+                </div>
+                <div class="emocao">
+                    <div class="emoji">😲​​</div>
+                    <div class="nome-emocao">Surpresa</div>
+                </div>
+                <div class="emocao">
+                    <div class="emoji">😍</div>
+                    <div class="nome-emocao">Apaixonado</div>
+                </div>
+            </div>
+            <button class="nova-emocao">+</button>
+        </div>
         <!--área da cena-->
         <div class="workspace">
             <div id="areaCenario">
@@ -62,21 +87,9 @@
                 <template class="fala">
                     <button class="bt-delete">x</button>
                     <textarea class="dialogo" placeholder="Disse..."></textarea>
-                    <!--<button class="add-emocao">
+                    <button class="add-emocao">
                         +
-                    </button>-->
-                    <div class="dropdown">
-                        <button class="add-emocao" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                          +
-                        </button>
-                        <ul class="dropdown-menu">
-                            <button class="nova-emocao">Nova emoção</button>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">😄​ Feliz</a></li>
-                            <li><a class="dropdown-item" href="#">😢 Triste</a></li>
-                            <li><a class="dropdown-item" href="#">😠 Raiva</a></li>
-                        </ul>
-                    </div>
+                    </button>
                 </template>
         </div>
     </main>

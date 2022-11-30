@@ -1,7 +1,13 @@
-﻿Para fazer:
+﻿Descrição:
 
-- [ ] Banco de Dados
-- [ ] Add emoção
-- [ ] Add nova cena
+- Projeto voltado a criação e desenvolvimento de histórias em forma de diálogos.
 
--
+Para fazer:
+
+[ ] Continuar funcionalidade de salvar histórias:
+        - [ ] Salvar lista de emoções
+        - [ ] Salvar Cenas
+        - [ ] Salvar diálogos
+[ ] Adicionar novas cenas no Projeto
+        - [ ] Criar novas cenas em uma mesma história
+        - [ ] Dividir a linha do tempo de acordo com cenas criadas

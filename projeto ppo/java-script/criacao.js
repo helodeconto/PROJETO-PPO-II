@@ -225,11 +225,19 @@ containerCenario.addEventListener("click", ev => {
 })
 
 
+const containerEmocao = document.querySelector(".container")
+const areaEmocao = containerEmocao.querySelector(".area-emocao")
+const btNovaEmocao = containerEmocao.querySelector(".nova-emocao")
+
+let lastClickedBtEmocao = null
+
 areaTrabalho.addEventListener("click", ev => {
     //remove diálogo
     const btClose = ev.target.closest(".bt-delete")
     const areaDialogo = ev.target.closest(".area-dialogo")
     
+    console.log(ev.target)
+
     if (btClose != null) {
         btClose.addEventListener("click", ev => {
             const modalFala = ev.target.closest(".area-dialogo")
@@ -239,41 +247,38 @@ areaTrabalho.addEventListener("click", ev => {
         modalFala.remove()
     }
 
-    //add emoção à fala
-    const areaEmocao = ev.target.closest(".dropdown-menu")
-
-    areaEmocao.addEventListener("click", ev => {
-        let emocao = ev.target.closest("li")
-        let emoji = emocao.innerText
-        console.log(emoji)
-
-        /*const areaTrabalho = document.querySelector(".worspace")
-        let addEmocao = Array.from(areaTrabalho.querySelectorAll(".add-emocao"))
-
-        addEmocao[idxAddEmocao].innerText = emoji*/
-    })
-
-    //nova emoção
-    const btNovaEmocao = document.querySelector(".nova-emocao")
-
-    btNovaEmocao.addEventListener("click", () => {
-        swal("Nova emoção:", {
-            content: "input",
-        })
-        .then((nome) => {
-
-            swal("Selecione um emoji", {
-                content: "input",
-            })
-            .then((emoji) => {
-                classeEmocao.nome = nome
-                let novaEmocao = document.createElement("div")
-                novaEmocao.setAttribute('class', 'emocao')
-                novaEmocao.innerHTML = `<li><a class="dropdown-item" href="#"> ${emoji} ${nome} </a></li>`;
-                areaEmocao.appendChild(novaEmocao)
-            })
-        });
-    })
+    if(ev.target.classList.contains("add-emocao")) {
+        const el = ev.target
+        lastClickedBtEmocao = ev.target
+        console.log(el) 
+        containerEmocao.classList.toggle("show")
+        return
+    }
 })
 
+//add emoção na fala
+areaEmocao.addEventListener("click", ev => {
+    let emocao = ev.target.closest(".emocao")
+    let areaEmoji = emocao.querySelector("div")
+    let emoji = areaEmoji.innerText
+    lastClickedBtEmocao.innerText = emoji
+    containerEmocao.classList.toggle("show")
+})
 
+btNovaEmocao.addEventListener("click", () => {
+    swal("Nova emoção:", {
+        content: "input",
+    })
+    .then((nome) => {
+        swal("Selecione um emoji", {
+            content: "input",
+        })
+        .then((emoji) => {
+            classeEmocao.nome = nome
+            let novaEmocao = document.createElement("div")
+            novaEmocao.setAttribute('class', 'emocao')
+            novaEmocao.innerHTML = `<div class="emoji"> ${emoji} </div> <div class="nome-emocao"> ${nome} </div>`;
+            areaEmocao.appendChild(novaEmocao)
+        })
+    })
+})

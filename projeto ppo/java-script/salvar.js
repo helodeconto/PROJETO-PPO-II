@@ -7,20 +7,41 @@ let data = {}
 
 function aoLerOArquivo() {
     h1Titulo.innerHTML = data.title
-}
-
-function aoSalvarOArquivo() {
-    const containerPersonagem = document.querySelector(".container-personagem")
-    let personagem = Array.from(containerPersonagem.querySelectorAll("div"))
-    data.title = h1Titulo.innerHTML
-    
-    for (let i = 0; i < personagem.length; i++) {
-        console.log(personagem[i].getAttribute('name'))
-        nomePersonagem = personagem[i].getAttribute('name')
-        data.personagens[i] = {"nome" : nomePersonagem};
+    console.log(data.personagens)
+    //lê e add personagens
+    for (let i = 0; i < data.personagens.length; i++){
+        console.log(data.personagens[i]["nome"])
+        let novoPersonagem = document.createElement("div")
+        novoPersonagem.innerText = data.personagens[i]["nome"];
+        containerPersonagem.appendChild(novoPersonagem).setAttribute("name", data.personagens[i]["nome"].toUpperCase())
+    }
+    //lê e add cenários
+    for (let i = 0; i < data.cenarios.length; i++){
+        console.log(data.cenarios[i]["nome"])
+        let novoCenario = document.createElement("div")
+        novoCenario.innerText = data.cenarios[i]["nome"];
+        containerCenario.appendChild(novoCenario).setAttribute("name", data.cenarios[i]["nome"].toUpperCase())
     }
 }
 
+function aoSalvarOArquivo() {
+    let personagens = Array.from(containerPersonagem.querySelectorAll("div"))
+    let cenarios = Array.from(containerCenario.querySelectorAll("div"))
+    let emocoes = document.querySelector(".area-emocao")
+    let emoji = Array.from(emocoes.querySelectorAll(".emoji"))
+    let nomeEmocao = Array.from(emocoes.querySelectorAll(".nome-emocao"))
+
+    //salvar título
+    data.title = h1Titulo.innerHTML
+    //salvar personagens
+    data.personagens = personagens.map(div => ({"nome" : div.innerText}))
+    //salvar cenários
+    data.cenarios = cenarios.map(div => ({"nome" : div.innerText}))
+    //salvar emoji
+    data.emocoes = emoji.map(div => ({"emoji": div.innerText}))
+}
+
+//Ler arquivo
 function lerArquivo(file) {
     const reader = new FileReader()
     reader.addEventListener("load", event => {
@@ -31,6 +52,7 @@ function lerArquivo(file) {
     reader.readAsBinaryString(file)
 }
 
+//salvar arquivo
 function salvarArquivo() {
     aoSalvarOArquivo()
     const a = document.createElement("a")
